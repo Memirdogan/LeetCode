@@ -1,0 +1,12 @@
+/* Write your T-SQL query statement below */
+SELECT employee_id
+FROM (
+    SELECT *
+    FROM Employees
+    UNION ALL 
+    SELECT *
+    FROM Salaries
+) AS t
+GROUP BY employee_id
+HAVING COUNT(*) < 2
+ORDER BY employee_id 
