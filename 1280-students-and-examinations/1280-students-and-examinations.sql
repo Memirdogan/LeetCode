@@ -1,5 +1,3 @@
-/* Write your T-SQL query statement below */
-
 SELECT S.student_id, S.student_name, Sub.subject_name, COUNT(E.subject_name) AS attended_exams
 FROM Students AS S
 CROSS JOIN Subjects AS Sub
